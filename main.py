@@ -1,16 +1,18 @@
-# This is a sample Python script.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import hashlib
+
+def compute_hash(file):
+    m = hashlib.sha256()
+    with open(file, 'rb') as f:
+        buf = f.read()
+        m.update(buf)
+    return(m.hexdigest())
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint. test
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    pass
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

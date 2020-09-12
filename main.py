@@ -27,6 +27,6 @@ def make_copy(file, output):
 if __name__ == '__main__':
     # GUI.main_window()
     dd.from_hardware("/dev/sdb", "image.dd")
-    # bulk_extractor.bulk_data_extractor("file.dd", "outputdir/", [])
-    bulk_extractor.read_bulk_data("/home/kali/Documents/")
+    # # bulk_extractor.bulk_data_extractor("file.dd", "outputdir/", [])
+    # bulk_extractor.read_bulk_data("/home/kali/Documents/")
 

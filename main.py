@@ -23,8 +23,11 @@ def make_copy(file, output):
         print("FAIL")
         return False
 
-def bulk_data_extractor(file, flags):
-    os.system(f"bulk-extractor {file}")
+def bulk_data_extractor(file, outdir, flags):
+    flagString = ""
+    for flag in flags:
+        flagString += flag
+    os.system(f"bulk-extractor -o {outdir} {flagString} {file}")
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':

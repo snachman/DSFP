@@ -1,8 +1,7 @@
 
 import hashlib
-import os
 import shutil
-import GUI
+import bulk_extractor
 
 def compute_hash(file):
     m = hashlib.sha256()
@@ -28,7 +27,8 @@ def make_copy(file, output):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     # GUI.main_window()
-    bulk_data_extractor("file.dd", "outputdir/", [])
+    # bulk_extractor.bulk_data_extractor("file.dd", "outputdir/", [])
+    bulk_extractor.read_bulk_data("/home/kali/Documents/")
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

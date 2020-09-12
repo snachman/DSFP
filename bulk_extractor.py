@@ -14,8 +14,12 @@ def read_bulk_data(output_location):
         fullpath = (output_location + file)
         if(test_empty_files(fullpath)):
             with open(fullpath, "r") as f:
+                print(f)
                 print(f.read())
+                f.close()
+
 
 def test_empty_files(file):
     if(os.path.getsize(file) > 0):
         return True
+

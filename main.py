@@ -2,7 +2,7 @@
 import hashlib
 import os
 import shutil
-
+import GUI
 
 def compute_hash(file):
     m = hashlib.sha256()
@@ -24,13 +24,15 @@ def make_copy(file, output):
         return False
 
 def bulk_data_extractor(file, outdir, flags):
-    flagString = ""
-    for flag in flags:
-        flagString += flag
-    os.system(f"bulk-extractor -o {outdir} {flagString} {file}")
+    flags = " -".join(flags)
+    # os.system(f"bulk-extractor -o {outdir} {flagString} {file}")
+    print(f"bulk-extractor -o {outdir} -{flags} {file}")
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    pass
+    # GUI.main_window()
+    bulk_data_extractor("shitpuss", "pusshit/", ["flag1", "flag2", "flag3"])
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

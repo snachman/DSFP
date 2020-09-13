@@ -1,1 +1,3 @@
-# Project refactored, see
+# DEPRECATED
+# See info at link below
+#

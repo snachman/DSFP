@@ -1,3 +1,3 @@
 # DEPRECATED
-# See info at link below
-#
+# See README at link below
+# https://github.com/snachman/DSFP

@@ -9,7 +9,7 @@ The basic steps are as follows:
 1. take a forensic image of a drive
 1. hash the original and image
 1. compare the two
-    1. if correct, run tests against the image
+    1. if correct, run user-defined tests against the image
     1. re-hash the image to confirm forensically sound properties
     1. log all activity
     1. produce a report

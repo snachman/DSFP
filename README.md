@@ -17,3 +17,18 @@ The basic steps are as follows:
 Future development will load reports as well as original media
 
 This project is best used on Kali Linux as the tools are already installed.
+
+Progress:
+- bulk-extractor
+- dd
+
+To-Do:
+- dc3dd
+- extundelete
+- Foremost
+- iPhone Backup Analyzer
+- Photorec
+- Galleta
+- Time
+- Date
+- Hex Searching

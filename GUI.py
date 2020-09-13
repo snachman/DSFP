@@ -1,8 +1,2 @@
-import tkinter
+from tkinter import *
 
-
-
-
-def main_window():
-    top = tkinter.Tk()
-    top.mainloop()

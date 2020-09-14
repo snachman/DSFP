@@ -1,3 +1,6 @@
+import hashlib
+import shutil
+
 def compute_hash(file):
     m = hashlib.sha256()
     with open(file, 'rb') as f:
@@ -16,3 +19,5 @@ def make_copy(file, output):
     else:
         print("FAIL")
         return False
+
+

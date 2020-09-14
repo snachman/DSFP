@@ -2,10 +2,10 @@ import guizero as gz
 
 
 class GUI:
-    def __init__(self, user, case_number):
-        self.user = user
-        self.case_number = case_number
-        self.app = gz.App(title="DSFP")
+    def __init__(self):
+        self.user = ""
+        self.case_number = 0
+        self.app = gz.App(title="DSFP", height=200, width=200)
         self.main_window(self.app)
 
     def set_case_info(self, user, case):
@@ -17,19 +17,28 @@ class GUI:
         investigator_name_label = gz.Text(case_info_window, text=self.user)
         case_number_label = gz.Text(case_info_window, text=self.case_number)
 
+
     def main_window(self, app):
-        menubar = gz.MenuBar(self.app, toplevel=["File"], options=[[["New Case", self.new_case_popup], ["Case Info", self.see_case_info], ["Exit", app.destroy]]])
+        # menubar = gz.MenuBar(self.app, toplevel=["File"], options=[[["New Case", self.new_case_popup], ["Case Info", self.see_case_info], ["Exit", app.destroy]]])
+        name_label = gz.Text(self.app, text="Enter Name:")
+        name_box = gz.TextBox(self.app)
+        case_number_label = gz.Text(self.app, text="Case Number:")
+        case_number_box = gz.TextBox(self.app)
+        submit_button = gz.PushButton(self.app, text="Submit", command=lambda: self.new_case_popup(name_box.value, case_number_box.value))
         self.app.display()
 
-    def new_case_popup(self):
-        new_case_window = gz.Window(self.app, title="Second window", height=200, width=200)
-        name_label = gz.Text(new_case_window, text="Enter Name:")
-        name_box = gz.TextBox(new_case_window)
-        case_number_label = gz.Text(new_case_window, text="Case Number:")
-        case_number_box = gz.TextBox(new_case_window)
+    def new_case_popup(self, user, caseno):
+        # self.app.hide()
+
+        new_case_window = gz.Window(self.app, title="Second window", height=600, width=600, menubar=menubar)
+        menubar = gz.MenuBar(new_case_window, toplevel=["File"], options=[[["Case Info", self.see_case_info], ["Exit", self.app.destroy]]])
+
+        original_label = gz.Text(new_case_window, text="Original:")
+        original_text_box = gz.TextBox(new_case_window)
 
 
-        submit_button = gz.PushButton(new_case_window, text="Submit", command=lambda: self.set_case_info(name_box.value, str(case_number_box.value)))
+
+
 
 
 
